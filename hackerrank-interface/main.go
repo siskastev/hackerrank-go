@@ -28,7 +28,8 @@ func main() {
 	var N int
 	fmt.Scanln(&N)
 	c := Calculator{N}
-	var arithmetic AdvancedArithmatic
-	arithmetic = &c
+	//var arithmetic AdvancedArithmatic
+	//arithmetic = &c
+	arithmetic := AdvancedArithmatic(&c)
 	fmt.Println(arithmetic.DivisorSum(c.n))
 }
