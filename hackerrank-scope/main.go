@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"sort"
 )
 
 // input
@@ -16,8 +15,23 @@ type Difference struct {
 }
 
 func (d *Difference) ComputeDifference() int {
-	sort.Ints(d.elements)
-	maxDiff := d.elements[len(d.elements)-1] - d.elements[0]
+	// 1
+	//sort.Ints(d.elements)
+	//maxDiff := d.elements[len(d.elements)-1] - d.elements[0]
+
+	//2
+	min, max := d.elements[0], d.elements[0]
+	for _, v := range d.elements {
+		if v < min {
+			min = v
+			fmt.Println("min", min)
+		}
+		if v > max {
+			max = v
+			fmt.Println("max", max)
+		}
+	}
+	maxDiff := max - min
 	return maxDiff
 }
 
