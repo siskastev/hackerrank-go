@@ -50,10 +50,20 @@ func main() {
 
 	// i = 0,1 -> 1,4
 	// j = 3,2 -> 2,3
-	for i, j := 0, len(arr)-1; i < j; i, j = i+1, j-1 {
+	//for i, j := 0, len(arr)-1; i < j; i, j = i+1, j-1 {
+	//	arr[i], arr[j] = arr[j], arr[i]
+	//}
+
+	//or
+	i := 0
+	j := len(arr) - 1
+
+	for i < j {
 		arr[i], arr[j] = arr[j], arr[i]
+		i++
+		j--
 	}
-	
+
 	var newArray []string
 	for i := 0; i < len(arr); i++ {
 		stringArray := strconv.FormatInt(int64(arr[i]), 10)
@@ -62,6 +72,13 @@ func main() {
 	result := strings.Join(newArray, " ")
 	fmt.Println(result)
 
+	//or
+	var newArray2 []int32
+	for i := len(arr) - 1; i >= 0; i-- {
+		newArray2 = append(newArray2, arr[i])
+	}
+
+	fmt.Println(newArray2)
 }
 
 func readLine(reader *bufio.Reader) string {

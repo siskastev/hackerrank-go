@@ -1,0 +1,24 @@
+go 1.19
+
+use (
+	./camelCase
+	./fibonacci
+	./fizzbuzz
+	./hackerrank-abstract
+	./hackerrank-array
+	./hackerrank-binary
+	./hackerrank-change-string
+	./hackerrank-class-vs-instance
+	./hackerrank-conditional-statements
+	./hackerrank-datatypes
+	./hackerrank-inheritance
+	./hackerrank-interface
+	./hackerrank-maps
+	./hackerrank-more-exceptions
+	./hackerrank-operators
+	./hackerrank-recursion
+	./hackerrank-scope
+	./hackerrank-string-integer
+	./rest-api-author
+	./tree-see-the-sun
+)

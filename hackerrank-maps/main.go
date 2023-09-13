@@ -33,7 +33,8 @@ func main() {
 		scanner.Scan()
 		split := strings.Fields(scanner.Text())
 		for i := 0; i < len(split); i += 2 {
-			mapNamePhoneNumber[split[i]] = split[i+1]
+			//mapNamePhoneNumber[split[i]] = split[i+1]
+			mapNamePhoneNumber[split[i]] = split[len(split)-1]
 		}
 	}
 
@@ -57,7 +58,7 @@ func main() {
 	//}
 
 	for _, v := range arrayName {
-		if _, key := mapNamePhoneNumber[v]; key {
+		if _, ok := mapNamePhoneNumber[v]; ok {
 			fmt.Printf("%v=%v\n", v, mapNamePhoneNumber[v])
 		} else {
 			fmt.Printf("Not found\n")
